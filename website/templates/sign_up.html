@@ -1,0 +1,34 @@
+<!-- this html file is a child of the base.html file so it extends it -->
+{% extends "base.html" %}
+<!-- this block is used to override the title block in the base.html file -->
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+    <form method="POST">
+        <h3 align = "center">Sign Up</h3>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email Address">
+        </div>
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    
+{% endblock %}
